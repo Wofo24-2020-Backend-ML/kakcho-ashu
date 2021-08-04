@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+
+	<meta name="google-signin-scope" content="Profile Email" />
+	<meta 
+	name="google-signin-client_id"
+	content="1053182702779-4smjg3c62mkub6s710o0loallkhkb8ua.apps.googleusercontent.com"
+	/>
+	{% load static %}
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+	<div class="g-signin2" id="rr_sendtoken" data-onsuccess = "onSignIn" data-theme ="dark"></div>
+	<script>
+		function onSignIn(googleUser){
+			var profile = googleUser.getBasicProfile();
+			console.log("ID: "+profile.getId());
+
+			var id_token = googleUser.getAuthResponse().id_token;
+			console.log("ID Token:" + id_token)
+			localStorage.setItem("ID Token", id_token);
+			id_token = localStorage.getItem("ID Token")
+			};
+
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+	<h3>First Click This Google Signin Button, This Button Will Access Users Google Auth, and sorry i am not frontend devloper so i made it little more lengthy process. so please click the button below to Get Signup Kakcho-Ashu. i have saved the token to your local storage</h3>
+
+	<a href="https://kakcho-ashu.herokuapp.com/postgoogletoken/"><button>Click me</button></a>
+
+	<h3>To Sign Up with Email</h3>
+	<a href="https://kakcho-ashu.herokuapp.com/signupf/"><button>Sign up Form</button></a>
+
+	<h3>Existing Account Login with Email or above Google Button</h3>
+	<a href="https://kakcho-ashu.herokuapp.com/loginf/"><button>Login With Email</button></a>
+
+
+
+</body>
+</html>

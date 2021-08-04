@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Login" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% load static %}
+  </head>
+  <body>
+
+
+    <table>
+      <tr>
+        <td style="width: 33.33%">
+          <div class="dash"></div>
+        </td>
+        <td style="padding: 0 6px">
+          <h1>Login</h1>
+        </td>
+        <td style="width: 33.33%">
+          <div class="dash"></div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <div>
+            <input type="file" name="inpFile" id ="inpFile">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <div>
+            <input id="column_name" placeholder="Type" type="Type" />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <div>
+            <input type="submit" id="rr_submit" value="Post" onclick="SubmitData()" />
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+  <script src="{% static 'js/task2ff.js' %}"></script>
+</html>
